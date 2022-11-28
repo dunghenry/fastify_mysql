@@ -1,18 +1,20 @@
 {
-  "name": "fastify_tutorial",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon --inspect src/index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "colors": "^1.4.0",
-    "dotenv": "^16.0.3",
-    "fastify": "^4.10.2",
-    "nodemon": "^2.0.20"
-  }
+    "name": "fastify_tutorial",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon -L src/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "dotenv": "^16.0.3",
+        "fastify": "^4.10.2",
+        "mysql2": "^2.3.3",
+        "nodemon": "^2.0.20",
+        "sequelize": "^6.25.8"
+    }
 }

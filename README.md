@@ -11,3 +11,16 @@ npm init -y
 ```js
 npm i fastify dotenv nodemon colors
 ```
+
+### Delete images none
+
+```js
+
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+```
+
+### Run docker
+
+```js
+docker-compose up
+```

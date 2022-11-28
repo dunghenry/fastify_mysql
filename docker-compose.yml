@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+  backend:
+    container_name: fastify_mysql
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    env_file: .env
+    volumes:
+      - "./src:/app/src"
+      - /app/node_modules
+    networks:
+      - trandung
+    environment:
+      DB_USER: root
+      DB_NAME: fastify_mysql
+      DB_PASSWORD: admin
+      DB_HOST: mysql
+  mysql:
+    image: mysql
+    container_name: fastify_mysql_db
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: fastify_mysql
+    expose:
+      - "3307"
+    ports:
+      - "3307:3306"
+    networks:
+      - trandung
+volumes:
+  mysql:
+networks:
+  trandung:
