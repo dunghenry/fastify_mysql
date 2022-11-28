@@ -24,3 +24,9 @@ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 ```js
 docker-compose up
 ```
+
+### Format code
+
+```js
+npm run format
+```

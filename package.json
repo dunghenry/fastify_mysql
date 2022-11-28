@@ -4,17 +4,23 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon -L src/index.js"
+        "start": "nodemon -L src/index.js",
+        "format": "prettier --single-quote --trailing-comma all --tab-width 4 --write src/**/*.{js,json,jsx,css,scss,ts,tsx}"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "bcrypt": "^5.1.0",
         "colors": "^1.4.0",
         "dotenv": "^16.0.3",
         "fastify": "^4.10.2",
+        "jsonwebtoken": "^8.5.1",
         "mysql2": "^2.3.3",
         "nodemon": "^2.0.20",
         "sequelize": "^6.25.8"
+    },
+    "devDependencies": {
+        "prettier": "^2.8.0"
     }
 }
